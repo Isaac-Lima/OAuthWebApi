@@ -1,0 +1,13 @@
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Domain\bin\Debug\net9.0\OAuthWebApi.Domain.deps.json
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Domain\bin\Debug\net9.0\OAuthWebApi.Domain.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Domain\bin\Debug\net9.0\OAuthWebApi.Domain.pdb
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Domain\obj\Debug\net9.0\OAuthWebApi.Domain.csproj.AssemblyReference.cache
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Domain\obj\Debug\net9.0\OAuthWebApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Domain\obj\Debug\net9.0\OAuthWebApi.Domain.AssemblyInfoInputs.cache
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Domain\obj\Debug\net9.0\OAuthWebApi.Domain.AssemblyInfo.cs
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Domain\obj\Debug\net9.0\OAuthWebApi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Domain\obj\Debug\net9.0\OAuthWebApi.Domain.sourcelink.json
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Domain\obj\Debug\net9.0\OAuthWebApi.Domain.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Domain\obj\Debug\net9.0\refint\OAuthWebApi.Domain.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Domain\obj\Debug\net9.0\OAuthWebApi.Domain.pdb
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Domain\obj\Debug\net9.0\ref\OAuthWebApi.Domain.dll
