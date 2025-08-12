@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OAuthWebApi.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ee7b7b5ad41d887d092833424c45b8ac52b443d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37cfda3e8d59dc9c5a196b8b346d766cd38d9fae")]
 [assembly: System.Reflection.AssemblyProductAttribute("OAuthWebApi.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OAuthWebApi.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
