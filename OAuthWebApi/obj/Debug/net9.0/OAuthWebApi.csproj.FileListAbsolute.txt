@@ -278,3 +278,7 @@ C:\dev\OAuthWebApi\OAuthWebApi\obj\Debug\net9.0\refint\OAuthWebApi.dll
 C:\dev\OAuthWebApi\OAuthWebApi\obj\Debug\net9.0\OAuthWebApi.pdb
 C:\dev\OAuthWebApi\OAuthWebApi\obj\Debug\net9.0\OAuthWebApi.genruntimeconfig.cache
 C:\dev\OAuthWebApi\OAuthWebApi\obj\Debug\net9.0\ref\OAuthWebApi.dll
+C:\dev\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Scalar.AspNetCore.dll
+C:\dev\OAuthWebApi\OAuthWebApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\dev\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\OAuthWebApi.Application.dll
+C:\dev\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\OAuthWebApi.Application.pdb

@@ -801,6 +801,22 @@
           }
         }
       },
+      "Scalar.AspNetCore/2.6.9": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "System.CodeDom/6.0.0": {
         "type": "package",
         "compile": {
@@ -1024,6 +1040,20 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "OAuthWebApi.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "OAuthWebApi.Domain": "1.0.0",
+          "OAuthWebApi.Infraestructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OAuthWebApi.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OAuthWebApi.Application.dll": {}
         }
       },
       "OAuthWebApi.Domain/1.0.0": {
@@ -2650,6 +2680,23 @@
         "postgresql.png"
       ]
     },
+    "Scalar.AspNetCore/2.6.9": {
+      "sha512": "wIejm5++cWnu2jrkNiku+AvIClEEgp8c7GMQmTuT5LZeamEhHS1tvGEDJhfnPCZ4DPIMVX6e9b4tpzRJ2Qqy/w==",
+      "type": "package",
+      "path": "scalar.aspnetcore/2.6.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net8.0/Scalar.AspNetCore.dll",
+        "lib/net8.0/Scalar.AspNetCore.xml",
+        "lib/net9.0/Scalar.AspNetCore.dll",
+        "lib/net9.0/Scalar.AspNetCore.xml",
+        "scalar.aspnetcore.2.6.9.nupkg.sha512",
+        "scalar.aspnetcore.nuspec"
+      ]
+    },
     "System.CodeDom/6.0.0": {
       "sha512": "CPc6tWO1LAer3IzfZufDBRL+UZQcj5uS207NHALQzP84Vp/z6wF0Aa0YZImOQY8iStY0A2zI/e3ihKNPfUm8XA==",
       "type": "package",
@@ -3038,6 +3085,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "OAuthWebApi.Application/1.0.0": {
+      "type": "project",
+      "path": "../OAuthWebApi.Application/OAuthWebApi.Application.csproj",
+      "msbuildProject": "../OAuthWebApi.Application/OAuthWebApi.Application.csproj"
+    },
     "OAuthWebApi.Domain/1.0.0": {
       "type": "project",
       "path": "../OAuthWebApi.Domain/OAuthWebApi.Domain.csproj",
@@ -3056,8 +3108,10 @@
       "Microsoft.EntityFrameworkCore >= 9.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.8",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.4",
+      "OAuthWebApi.Application >= 1.0.0",
       "OAuthWebApi.Domain >= 1.0.0",
-      "OAuthWebApi.Infraestructure >= 1.0.0"
+      "OAuthWebApi.Infraestructure >= 1.0.0",
+      "Scalar.AspNetCore >= 2.6.9"
     ]
   },
   "packageFolders": {
@@ -3092,6 +3146,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\dev\\OAuthWebApi\\OAuthWebApi.Application\\OAuthWebApi.Application.csproj": {
+              "projectPath": "C:\\dev\\OAuthWebApi\\OAuthWebApi.Application\\OAuthWebApi.Application.csproj"
+            },
             "C:\\dev\\OAuthWebApi\\OAuthWebApi.Domain\\OAuthWebApi.Domain.csproj": {
               "projectPath": "C:\\dev\\OAuthWebApi\\OAuthWebApi.Domain\\OAuthWebApi.Domain.csproj"
             },
@@ -3138,6 +3195,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[9.0.4, )"
+          },
+          "Scalar.AspNetCore": {
+            "target": "Package",
+            "version": "[2.6.9, )"
           }
         },
         "imports": [

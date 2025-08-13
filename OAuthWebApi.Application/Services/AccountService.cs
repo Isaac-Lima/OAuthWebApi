@@ -1,15 +1,20 @@
-﻿using OAuthWebApi.Application.Abstracts;
+﻿using Microsoft.AspNetCore.Identity;
+using OAuthWebApi.Application.Abstracts;
+using OAuthWebApi.Domain.Entities;
+using OAuthWebApi.Domain.Exceptions;
 using OAuthWebApi.Domain.Requests;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OAuthWebApi.Application.Services
 {
-    internal class AccountService : IaccountIService
+    public class AccountService : IaccountIService
     {
+        private readonly UserManager<User> _userManager;
+
+        public AccountService(UserManager<User> userManager)
+        {
+            _userManager = userManager;
+        }
+
         public Task LoginAsync(LoginRequest loginRequest)
         {
             throw new NotImplementedException();
@@ -20,9 +25,24 @@ namespace OAuthWebApi.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task RegisterAsync(ResgisterRequest resgisterRequest)
+        public async Task RegisterAsync(ResgisterRequest resgisterRequest)
         {
-            throw new NotImplementedException();
+            var userExists = await _userManager.FindByEmailAsync(resgisterRequest.Email) != null;
+
+            if (userExists)
+            {
+                throw new UserAlreadyExistsException(resgisterRequest.Email);
+            }
+
+            var user = User.Create(resgisterRequest.Email, resgisterRequest.FirstName, resgisterRequest.LastName);
+            user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, resgisterRequest.Password);
+
+            var result = await _userManager.CreateAsync(user);
+
+            if (!result.Succeeded) 
+            {
+               throw new  RegistrationFailedException(result.Errors.Select(x => x.Description));
+            }
         }
     }
 }

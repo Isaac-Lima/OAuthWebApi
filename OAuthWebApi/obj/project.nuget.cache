@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rZeTljz2ueU=",
+  "dgSpecHash": "B35umthFv7g=",
   "success": true,
   "projectFilePath": "C:\\dev\\OAuthWebApi\\OAuthWebApi\\OAuthWebApi.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,7 @@
     "C:\\Users\\AGNA-DEV\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\AGNA-DEV\\.nuget\\packages\\npgsql\\9.0.3\\npgsql.9.0.3.nupkg.sha512",
     "C:\\Users\\AGNA-DEV\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.4\\npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512",
+    "C:\\Users\\AGNA-DEV\\.nuget\\packages\\scalar.aspnetcore\\2.6.9\\scalar.aspnetcore.2.6.9.nupkg.sha512",
     "C:\\Users\\AGNA-DEV\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\AGNA-DEV\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
     "C:\\Users\\AGNA-DEV\\.nuget\\packages\\system.composition\\7.0.0\\system.composition.7.0.0.nupkg.sha512",

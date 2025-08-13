@@ -1,7 +1,12 @@
 using Microsoft.AspNetCore.Identity;
-using OAuthWebApi.Domain.Entities;
-using OAuthWebApi.Infraestructure;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.EntityFrameworkCore;
+using OAuthWebApi.Application.Abstracts;
+using OAuthWebApi.Application.Services;
+using OAuthWebApi.Domain.Entities;
+using OAuthWebApi.Domain.Requests;
+using OAuthWebApi.Infraestructure;
+using Scalar.AspNetCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,17 +32,30 @@ builder.Services.AddDbContext<ApplicationDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("DbConnectionString"));
 });
 
+builder.Services.AddScoped<IaccountIService, AccountService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference(opt =>
+    {
+        opt.WithTitle("JWT + Refresh Token Auth API");
+    });
 }
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.MapPost("/api/account/register", async (ResgisterRequest registerRequest, IaccountIService accountService) =>
+{
+    await accountService.RegisterAsync(registerRequest);
+
+    return Results.Ok();
+});
 
 app.MapControllers();
 

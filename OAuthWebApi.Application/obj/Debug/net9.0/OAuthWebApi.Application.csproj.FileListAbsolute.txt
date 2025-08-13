@@ -22,3 +22,9 @@ C:\dev\OAuthWebApi\OAuthWebApi.Application\obj\Debug\net9.0\OAuthWebApi.Applicat
 C:\dev\OAuthWebApi\OAuthWebApi.Application\obj\Debug\net9.0\refint\OAuthWebApi.Application.dll
 C:\dev\OAuthWebApi\OAuthWebApi.Application\obj\Debug\net9.0\OAuthWebApi.Application.pdb
 C:\dev\OAuthWebApi\OAuthWebApi.Application\obj\Debug\net9.0\ref\OAuthWebApi.Application.dll
+C:\dev\OAuthWebApi\OAuthWebApi.Application\bin\Debug\net9.0\OAuthWebApi.Domain.dll
+C:\dev\OAuthWebApi\OAuthWebApi.Application\bin\Debug\net9.0\OAuthWebApi.Infraestructure.dll
+C:\dev\OAuthWebApi\OAuthWebApi.Application\bin\Debug\net9.0\OAuthWebApi.Domain.pdb
+C:\dev\OAuthWebApi\OAuthWebApi.Application\bin\Debug\net9.0\OAuthWebApi.Infraestructure.pdb
+C:\dev\OAuthWebApi\OAuthWebApi.Application\obj\Debug\net9.0\OAuthWebApi.Application.csproj.AssemblyReference.cache
+C:\dev\OAuthWebApi\OAuthWebApi.Application\obj\Debug\net9.0\OAuthWeb.3E17CEF3.Up2Date

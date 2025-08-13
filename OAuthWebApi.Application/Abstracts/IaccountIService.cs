@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OAuthWebApi.Application.Abstracts
 {
-    internal interface IaccountIService
+    public interface IaccountIService
     {
         Task RegisterAsync(ResgisterRequest resgisterRequest);
         Task LoginAsync(LoginRequest loginRequest);

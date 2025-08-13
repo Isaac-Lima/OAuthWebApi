@@ -15,9 +15,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    <PackageReference Include="Scalar.AspNetCore" Version="2.6.9" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OAuthWebApi.Application\OAuthWebApi.Application.csproj" />
     <ProjectReference Include="..\OAuthWebApi.Domain\OAuthWebApi.Domain.csproj" />
     <ProjectReference Include="..\OAuthWebApi.Infraestructure\OAuthWebApi.Infraestructure.csproj" />
   </ItemGroup>
