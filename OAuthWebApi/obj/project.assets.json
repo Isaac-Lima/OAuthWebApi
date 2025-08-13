@@ -1044,6 +1044,7 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.8",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
           "OAuthWebApi.Domain": "1.0.0"
         },
         "compile": {
@@ -3060,23 +3061,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Isaac\\.nuget\\packages\\": {},
+    "C:\\Users\\AGNA-DEV\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi\\OAuthWebApi.csproj",
+      "projectUniqueName": "C:\\dev\\OAuthWebApi\\OAuthWebApi\\OAuthWebApi.csproj",
       "projectName": "OAuthWebApi",
-      "projectPath": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi\\OAuthWebApi.csproj",
-      "packagesPath": "C:\\Users\\Isaac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi\\obj\\",
+      "projectPath": "C:\\dev\\OAuthWebApi\\OAuthWebApi\\OAuthWebApi.csproj",
+      "packagesPath": "C:\\Users\\AGNA-DEV\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\OAuthWebApi\\OAuthWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Isaac\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\AGNA-DEV\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3091,11 +3092,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi.Domain\\OAuthWebApi.Domain.csproj": {
-              "projectPath": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi.Domain\\OAuthWebApi.Domain.csproj"
+            "C:\\dev\\OAuthWebApi\\OAuthWebApi.Domain\\OAuthWebApi.Domain.csproj": {
+              "projectPath": "C:\\dev\\OAuthWebApi\\OAuthWebApi.Domain\\OAuthWebApi.Domain.csproj"
             },
-            "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi.Infraestructure\\OAuthWebApi.Infraestructure.csproj": {
-              "projectPath": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi.Infraestructure\\OAuthWebApi.Infraestructure.csproj"
+            "C:\\dev\\OAuthWebApi\\OAuthWebApi.Infraestructure\\OAuthWebApi.Infraestructure.csproj": {
+              "projectPath": "C:\\dev\\OAuthWebApi\\OAuthWebApi.Infraestructure\\OAuthWebApi.Infraestructure.csproj"
             }
           }
         }
@@ -3158,7 +3159,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

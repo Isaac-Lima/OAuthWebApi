@@ -702,6 +702,7 @@
       "OAuthWebApi.Infraestructure/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.8",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
           "OAuthWebApi.Domain": "1.0.0"
         },
         "runtime": {
