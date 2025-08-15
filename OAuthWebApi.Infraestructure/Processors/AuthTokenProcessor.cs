@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using OAuthWebApi.Application.Abstracts;
 using OAuthWebApi.Domain.Entities;
@@ -15,10 +16,10 @@ namespace OAuthWebApi.Infraestructure.Processors
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly JwtOptions _jwtOptions;
 
-        public AuthTokenProcessor(IHttpContextAccessor httpContextAccessor, JwtOptions jwtOptions)
+        public AuthTokenProcessor(IHttpContextAccessor httpContextAccessor, IOptions<JwtOptions> jwtOptions)
         {
             _httpContextAccessor = httpContextAccessor;
-            _jwtOptions = jwtOptions;
+            _jwtOptions = jwtOptions.Value;
         }
 
         public (string jwtToken, DateTime expiresAtUtc) GenerateJwtToken(User user)

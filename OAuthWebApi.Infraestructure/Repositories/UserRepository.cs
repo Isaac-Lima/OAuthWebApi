@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OAuthWebApi.Application.Abstracts;
 using OAuthWebApi.Domain.Entities;
 
 namespace OAuthWebApi.Infraestructure.Repositories
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
         private readonly ApplicationDbContext _context;
 

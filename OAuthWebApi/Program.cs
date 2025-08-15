@@ -6,9 +6,11 @@ using OAuthWebApi.Application.Abstracts;
 using OAuthWebApi.Application.Services;
 using OAuthWebApi.Domain.Entities;
 using OAuthWebApi.Domain.Requests;
+using OAuthWebApi.Handler;
 using OAuthWebApi.Infraestructure;
 using OAuthWebApi.Infraestructure.Options;
 using OAuthWebApi.Infraestructure.Processors;
+using OAuthWebApi.Infraestructure.Repositories;
 using Scalar.AspNetCore;
 using System.Text;
 
@@ -20,6 +22,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.Configure<JwtOptions>(
+    builder.Configuration.GetSection(JwtOptions.JwtOptionsKey));
 
 builder.Services.AddIdentity<User, IdentityRole<Guid>>(opt =>
 {
@@ -38,6 +43,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(opt =>
 
 builder.Services.AddScoped<IaccountIService, AccountService>();
 builder.Services.AddScoped<IAuthTokenProcessor, AuthTokenProcessor>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddAuthentication(opt =>
 {
@@ -70,6 +76,9 @@ builder.Services.AddAuthentication(opt =>
     };
 });
 
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddHttpContextAccessor();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -86,9 +95,18 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+
+
 app.MapPost("/api/account/register", async (ResgisterRequest registerRequest, IaccountIService accountService) =>
 {
     await accountService.RegisterAsync(registerRequest);
+
+    return Results.Ok();
+});
+
+app.MapPost("/api/account/login", async (LoginRequest loginRequest, IaccountIService accountService) =>
+{
+    await accountService.LoginAsync(loginRequest);
 
     return Results.Ok();
 });
