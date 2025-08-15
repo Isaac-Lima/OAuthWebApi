@@ -1,12 +1,16 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using OAuthWebApi.Application.Abstracts;
 using OAuthWebApi.Application.Services;
 using OAuthWebApi.Domain.Entities;
 using OAuthWebApi.Domain.Requests;
 using OAuthWebApi.Infraestructure;
+using OAuthWebApi.Infraestructure.Options;
+using OAuthWebApi.Infraestructure.Processors;
 using Scalar.AspNetCore;
+using System.Text;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,6 +37,38 @@ builder.Services.AddDbContext<ApplicationDbContext>(opt =>
 });
 
 builder.Services.AddScoped<IaccountIService, AccountService>();
+builder.Services.AddScoped<IAuthTokenProcessor, AuthTokenProcessor>();
+
+builder.Services.AddAuthentication(opt =>
+{
+    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    var jwtOptions = builder.Configuration.GetSection(JwtOptions.JwtOptionsKey)
+        .Get<JwtOptions>() ?? throw new ArgumentException(nameof(JwtOptions));
+
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = jwtOptions.Issuer,
+        ValidAudience = jwtOptions.Audience,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.Secret))
+    };
+
+    options.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context =>
+        {
+            context.Token = context.Request.Cookies["ACCESS_TOKEN"];
+            return Task.CompletedTask;
+        }
+    };
+});
 
 var app = builder.Build();
 

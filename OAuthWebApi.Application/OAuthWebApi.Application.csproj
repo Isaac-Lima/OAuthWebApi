@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OAuthWebApi.Domain\OAuthWebApi.Domain.csproj" />
-    <ProjectReference Include="..\OAuthWebApi.Infraestructure\OAuthWebApi.Infraestructure.csproj" />
   </ItemGroup>
 
 </Project>

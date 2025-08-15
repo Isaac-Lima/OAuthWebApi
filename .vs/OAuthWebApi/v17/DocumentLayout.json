@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\dev\\OAuthWebApi\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{27C37A99-B14E-4C73-AB71-24505CD0BF21}|OAuthWebApi\\OAuthWebApi.csproj|c:\\users\\isaac\\source\\repos\\oauthwebapi\\oauthwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27C37A99-B14E-4C73-AB71-24505CD0BF21}|OAuthWebApi\\OAuthWebApi.csproj|solutionrelative:oauthwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +23,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi\\Program.cs",
+              "RelativeDocumentMoniker": "OAuthWebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi\\Program.cs",
+              "RelativeToolTip": "OAuthWebApi\\Program.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T16:43:48.504Z",
+              "EditorCaption": ""
             }
           ]
         }

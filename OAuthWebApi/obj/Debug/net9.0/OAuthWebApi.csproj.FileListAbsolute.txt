@@ -282,3 +282,7 @@ C:\dev\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Scalar.AspNetCore.dll
 C:\dev\OAuthWebApi\OAuthWebApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\dev\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\OAuthWebApi.Application.dll
 C:\dev\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\OAuthWebApi.Application.pdb
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Scalar.AspNetCore.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\OAuthWebApi.Application.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\OAuthWebApi.Application.pdb
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
