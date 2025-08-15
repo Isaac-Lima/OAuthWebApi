@@ -29,8 +29,6 @@ C:\dev\OAuthWebApi\OAuthWebApi.Application\bin\Debug\net9.0\OAuthWebApi.Infraest
 C:\dev\OAuthWebApi\OAuthWebApi.Application\obj\Debug\net9.0\OAuthWebApi.Application.csproj.AssemblyReference.cache
 C:\dev\OAuthWebApi\OAuthWebApi.Application\obj\Debug\net9.0\OAuthWeb.3E17CEF3.Up2Date
 C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Application\bin\Debug\net9.0\OAuthWebApi.Domain.dll
-C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Application\bin\Debug\net9.0\OAuthWebApi.Infraestructure.dll
 C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Application\bin\Debug\net9.0\OAuthWebApi.Domain.pdb
-C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Application\bin\Debug\net9.0\OAuthWebApi.Infraestructure.pdb
 C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Application\obj\Debug\net9.0\OAuthWebApi.Application.csproj.AssemblyReference.cache
 C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi.Application\obj\Debug\net9.0\OAuthWeb.3E17CEF3.Up2Date
