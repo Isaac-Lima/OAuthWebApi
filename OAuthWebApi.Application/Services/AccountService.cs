@@ -3,6 +3,7 @@ using OAuthWebApi.Application.Abstracts;
 using OAuthWebApi.Domain.Entities;
 using OAuthWebApi.Domain.Exceptions;
 using OAuthWebApi.Domain.Requests;
+using System.Security.Claims;
 
 namespace OAuthWebApi.Application.Services
 {
@@ -40,6 +41,11 @@ namespace OAuthWebApi.Application.Services
 
             _authTokenProcessor.WriteAuthTokenAsHttpOnlyCookie("ACCESS_TOKEN", jwtToken, expirationDateInUtc);
             _authTokenProcessor.WriteAuthTokenAsHttpOnlyCookie("REFRESH_TOKEN", user.RefreshToken, refreshTokenExpirationDateInUtc);
+        }
+
+        public Task LoginWithGoogleAsync(ClaimsPrincipal? claimsPrincipal)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task RefreshToken(string? refreshToken)
