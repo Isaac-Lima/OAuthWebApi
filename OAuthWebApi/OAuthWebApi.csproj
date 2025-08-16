@@ -4,6 +4,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>451575607428-nvdp2bg6bgvjqp9rqoa4jjth86qge4hl.apps.googleusercontent.com</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
