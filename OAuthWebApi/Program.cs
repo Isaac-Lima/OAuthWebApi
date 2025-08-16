@@ -1,5 +1,9 @@
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using OAuthWebApi.Application.Abstracts;
@@ -14,17 +18,20 @@ using OAuthWebApi.Infraestructure.Repositories;
 using Scalar.AspNetCore;
 using System.Text;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
 builder.Services.Configure<JwtOptions>(
     builder.Configuration.GetSection(JwtOptions.JwtOptionsKey));
+
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("CorsPolicy", options =>
+    {
+        options.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:5173");
+    });
+});
 
 builder.Services.AddIdentity<User, IdentityRole<Guid>>(opt =>
 {
@@ -32,7 +39,7 @@ builder.Services.AddIdentity<User, IdentityRole<Guid>>(opt =>
     opt.Password.RequireLowercase = true;
     opt.Password.RequireNonAlphanumeric = true;
     opt.Password.RequireUppercase = true;
-    opt.Password.RequiredLength = 8;    
+    opt.Password.RequiredLength = 8;
     opt.User.RequireUniqueEmail = true;
 }).AddEntityFrameworkStores<ApplicationDbContext>();
 
@@ -41,15 +48,35 @@ builder.Services.AddDbContext<ApplicationDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("DbConnectionString"));
 });
 
-builder.Services.AddScoped<IaccountIService, AccountService>();
 builder.Services.AddScoped<IAuthTokenProcessor, AuthTokenProcessor>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IaccountIService, AccountService>();
 
 builder.Services.AddAuthentication(opt =>
 {
     opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     opt.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddCookie().AddGoogle(options =>
+{
+    var clientId = builder.Configuration["Authentication:Google:ClientId"];
+
+    if (clientId == null)
+    {
+        throw new ArgumentNullException(nameof(clientId));
+    }
+
+    var clientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+
+    if (clientSecret == null)
+    {
+        throw new ArgumentNullException(nameof(clientSecret));
+    }
+
+    options.ClientId = clientId;
+    options.ClientSecret = clientSecret;
+    options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+
 }).AddJwtBearer(options =>
 {
     var jwtOptions = builder.Configuration.GetSection(JwtOptions.JwtOptionsKey)
@@ -76,12 +103,13 @@ builder.Services.AddAuthentication(opt =>
     };
 });
 
+builder.Services.AddAuthorization();
+
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
@@ -91,11 +119,12 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+app.UseCors("CorsPolicy");
+
+app.UseExceptionHandler(_ => { });
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
-
-
 
 app.MapPost("/api/account/register", async (ResgisterRequest registerRequest, IaccountIService accountService) =>
 {
@@ -120,6 +149,30 @@ app.MapPost("/api/account/refresh", async (HttpContext httpContext, IaccountISer
     return Results.Ok();
 });
 
-app.MapControllers();
+app.MapGet("/api/account/login/google", ([FromQuery] string returnUrl, LinkGenerator linkGenerator,
+    SignInManager<User> signManager, HttpContext context) =>
+{
+    var properties = signManager.ConfigureExternalAuthenticationProperties("Google",
+        linkGenerator.GetPathByName(context, "GoogleLoginCallback")
+        + $"?returnUrl={returnUrl}");
+
+    return Results.Challenge(properties, ["Google"]);
+});
+
+app.MapGet("/api/account/login/google/callback", async ([FromQuery] string returnUrl,
+    HttpContext context, IaccountIService accountService) =>
+{
+    var result = await context.AuthenticateAsync(GoogleDefaults.AuthenticationScheme);
+
+    if (!result.Succeeded)
+    {
+        return Results.Unauthorized();
+    }
+
+    await accountService.LoginWithGoogleAsync(result.Principal);
+
+    return Results.Redirect(returnUrl);
+
+}).WithName("GoogleLoginCallback");
 
 app.Run();

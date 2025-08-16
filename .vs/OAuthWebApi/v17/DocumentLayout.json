@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03F45E68-0459-4C1B-8749-B3DF1B19EB94}|OAuthWebApi.Application\\OAuthWebApi.Application.csproj|c:\\users\\isaac\\source\\repos\\oauthwebapi\\oauthwebapi.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03F45E68-0459-4C1B-8749-B3DF1B19EB94}|OAuthWebApi.Application\\OAuthWebApi.Application.csproj|solutionrelative:oauthwebapi.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{27C37A99-B14E-4C73-AB71-24505CD0BF21}|OAuthWebApi\\OAuthWebApi.csproj|c:\\users\\isaac\\source\\repos\\oauthwebapi\\oauthwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27C37A99-B14E-4C73-AB71-24505CD0BF21}|OAuthWebApi\\OAuthWebApi.csproj|solutionrelative:oauthwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -31,27 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi.Application\\Services\\AccountService.cs",
-              "RelativeDocumentMoniker": "OAuthWebApi.Application\\Services\\AccountService.cs",
-              "ToolTip": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi.Application\\Services\\AccountService.cs",
-              "RelativeToolTip": "OAuthWebApi.Application\\Services\\AccountService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABsAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-16T21:40:32.475Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi\\Program.cs",
               "RelativeDocumentMoniker": "OAuthWebApi\\Program.cs",
               "ToolTip": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi\\Program.cs",
               "RelativeToolTip": "OAuthWebApi\\Program.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAHUAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAALAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-16T21:38:29.15Z",
+              "WhenOpened": "2025-08-16T22:52:18.222Z",
               "EditorCaption": ""
             }
           ]

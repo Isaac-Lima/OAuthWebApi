@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("451575607428-nvdp2bg6bgvjqp9rqoa4jjth86qge4hl.apps.googleusercontent.com")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("OAuthWebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56d250f1cbca0b2887a189068262d2d28685e8ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28d15bd4c632c1c1ca4815f02dad2eb234ee58e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("OAuthWebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OAuthWebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
