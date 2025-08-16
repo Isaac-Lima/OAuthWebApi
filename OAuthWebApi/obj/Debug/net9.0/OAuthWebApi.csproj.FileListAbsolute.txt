@@ -295,3 +295,4 @@ C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Microsoft.I
 C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.Google.dll

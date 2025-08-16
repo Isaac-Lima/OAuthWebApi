@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "+f8HXDHNp2Y=",
+  "dgSpecHash": "ntV1ucqwp68=",
   "success": true,
   "projectFilePath": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi\\OAuthWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Isaac\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Isaac\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\9.0.8\\microsoft.aspnetcore.authentication.google.9.0.8.nupkg.sha512",
     "C:\\Users\\Isaac\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.8\\microsoft.aspnetcore.authentication.jwtbearer.9.0.8.nupkg.sha512",
     "C:\\Users\\Isaac\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\9.0.8\\microsoft.aspnetcore.cryptography.internal.9.0.8.nupkg.sha512",
     "C:\\Users\\Isaac\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\9.0.8\\microsoft.aspnetcore.cryptography.keyderivation.9.0.8.nupkg.sha512",

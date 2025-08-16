@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{03F45E68-0459-4C1B-8749-B3DF1B19EB94}|OAuthWebApi.Application\\OAuthWebApi.Application.csproj|c:\\users\\isaac\\source\\repos\\oauthwebapi\\oauthwebapi.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03F45E68-0459-4C1B-8749-B3DF1B19EB94}|OAuthWebApi.Application\\OAuthWebApi.Application.csproj|solutionrelative:oauthwebapi.application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -23,19 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi.Application\\Services\\AccountService.cs",
-              "RelativeDocumentMoniker": "OAuthWebApi.Application\\Services\\AccountService.cs",
-              "ToolTip": "C:\\Users\\Isaac\\source\\repos\\OAuthWebApi\\OAuthWebApi.Application\\Services\\AccountService.cs",
-              "RelativeToolTip": "OAuthWebApi.Application\\Services\\AccountService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAgwCsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-16T22:15:37.123Z",
-              "EditorCaption": ""
             }
           ]
         }
