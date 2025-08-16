@@ -282,3 +282,16 @@ C:\dev\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Scalar.AspNetCore.dll
 C:\dev\OAuthWebApi\OAuthWebApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\dev\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\OAuthWebApi.Application.dll
 C:\dev\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\OAuthWebApi.Application.pdb
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Scalar.AspNetCore.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\OAuthWebApi.Application.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\OAuthWebApi.Application.pdb
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Microsoft.Identity.Abstractions.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Isaac\source\repos\OAuthWebApi\OAuthWebApi\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

@@ -1,12 +1,18 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using OAuthWebApi.Application.Abstracts;
 using OAuthWebApi.Application.Services;
 using OAuthWebApi.Domain.Entities;
 using OAuthWebApi.Domain.Requests;
+using OAuthWebApi.Handler;
 using OAuthWebApi.Infraestructure;
+using OAuthWebApi.Infraestructure.Options;
+using OAuthWebApi.Infraestructure.Processors;
+using OAuthWebApi.Infraestructure.Repositories;
 using Scalar.AspNetCore;
+using System.Text;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +22,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.Configure<JwtOptions>(
+    builder.Configuration.GetSection(JwtOptions.JwtOptionsKey));
 
 builder.Services.AddIdentity<User, IdentityRole<Guid>>(opt =>
 {
@@ -33,6 +42,42 @@ builder.Services.AddDbContext<ApplicationDbContext>(opt =>
 });
 
 builder.Services.AddScoped<IaccountIService, AccountService>();
+builder.Services.AddScoped<IAuthTokenProcessor, AuthTokenProcessor>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+builder.Services.AddAuthentication(opt =>
+{
+    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    var jwtOptions = builder.Configuration.GetSection(JwtOptions.JwtOptionsKey)
+        .Get<JwtOptions>() ?? throw new ArgumentException(nameof(JwtOptions));
+
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = jwtOptions.Issuer,
+        ValidAudience = jwtOptions.Audience,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.Secret))
+    };
+
+    options.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context =>
+        {
+            context.Token = context.Request.Cookies["ACCESS_TOKEN"];
+            return Task.CompletedTask;
+        }
+    };
+});
+
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
@@ -50,9 +95,18 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+
+
 app.MapPost("/api/account/register", async (ResgisterRequest registerRequest, IaccountIService accountService) =>
 {
     await accountService.RegisterAsync(registerRequest);
+
+    return Results.Ok();
+});
+
+app.MapPost("/api/account/login", async (LoginRequest loginRequest, IaccountIService accountService) =>
+{
+    await accountService.LoginAsync(loginRequest);
 
     return Results.Ok();
 });
