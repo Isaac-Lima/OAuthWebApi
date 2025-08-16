@@ -111,6 +111,15 @@ app.MapPost("/api/account/login", async (LoginRequest loginRequest, IaccountISer
     return Results.Ok();
 });
 
+app.MapPost("/api/account/refresh", async (HttpContext httpContext, IaccountIService accountService) =>
+{
+    var refreshToken = httpContext.Request.Cookies["REFRESH_TOKEN"];
+
+    await accountService.RefreshToken(refreshToken);
+
+    return Results.Ok();
+});
+
 app.MapControllers();
 
 app.Run();
